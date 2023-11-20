@@ -13,3 +13,4 @@ spring.datasource.username=sa
 spring.datasource.password=password
 spring.datasource.url=jdbc:h2:file:C:/Users/duffy/tacocloud
 spring.datasource.driverClassName=org.h2.Driver
+
