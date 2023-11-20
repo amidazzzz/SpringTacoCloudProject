@@ -1,19 +1,14 @@
 package com.amida.tacocloud.model;
 
 import java.io.Serial;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.
         SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 @Data
 @NoArgsConstructor(force=true)
 @RequiredArgsConstructor
+@Table(name = "users")
 public class User implements UserDetails {
     @Serial
     private static final long serialVersionUID = 1L;

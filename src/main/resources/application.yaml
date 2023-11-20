@@ -1,16 +1,32 @@
-spring.devtools.restart.enabled=true
-spring.thymeleaf.prefix=classpath:/templates/
-spring.thymeleaf.cache=false
+spring:
+  devtools:
+    restart:
+      enabled: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
 
-spring.datasource.generate-unique-name=false
-spring.datasource.name=tacocloud
-spring.datasource.initialization-mode=embedded
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+    username: sa
+    password: password
+    url: jdbc:h2:file:C:/Users/duffy/tacocloud
+    driverClassName: org.h2.Driver
 
-spring.jpa.hibernate.ddl-auto=update
-spring.h2.console.enabled=true
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
 
-spring.datasource.username=sa
-spring.datasource.password=password
-spring.datasource.url=jdbc:h2:file:C:/Users/duffy/tacocloud
-spring.datasource.driverClassName=org.h2.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          <oauth2 or openid provider name>:
+            clientId: <google client id>
+            clientSecret: <google client secret>
+            scope: <comma-separated list of requested scopes>
 
